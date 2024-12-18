@@ -13,5 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Header Files\GameScene">
+      <UniqueIdentifier>{241a7ae6-f403-4ca0-b345-d21d6cf1a989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Wrappers">
+      <UniqueIdentifier>{6a0e31b5-e538-47c6-8640-7fe239a877f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implement Files">
+      <UniqueIdentifier>{08e948ac-d09e-49ab-afc4-471349d43eb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implement Files\Wrappers">
+      <UniqueIdentifier>{625a19b5-a391-44fc-9ec4-c7526c5dbdb2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="testingFiles\testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\Wrappers\enttRegistryWrapper.cpp">
+      <Filter>Implement Files\Wrappers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
