@@ -19,19 +19,25 @@ namespace Ugly2DEngine
 
         public:
             /// <summary>
-            /// This is a base class constructor.
-            /// Someone says : use or discard... make your choice.
+            /// <para>This is a base class constructor.</para>
+            /// <para>Someone says : use or discard... make your choice.</para>
             /// </summary>
-            /// <param name="std::string sceneName"></param>
-            /// <param name="int sceneID"></param>
             SceneBase(std::string sceneName = "Ugly2DEngineNullSceneNameNotSetNull", int sceneID = -1);
-
+            
             SceneBase(SceneBase&&) = delete;
 
             SceneBase(const SceneBase&) = delete;
-
+                
+            /// <summary>
+            /// <para>Engine calls this function every frame</para>
+            /// <para>You MUST override this function</para>
+            /// </summary>
+            /// <param name="window">: A window that can render something</param>
             virtual void Update(sf::RenderWindow& window) = 0;
 
+            /// <summary>
+            /// <para>Engine calls this function when activated scene is changed to this scene</para>
+            /// </summary>
             virtual void OnActivated();
 
         };
