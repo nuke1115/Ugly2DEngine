@@ -12,23 +12,25 @@ void Testcreate(int n, entt::registry& reg)
     }
 }
 
+
+#include "..\Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp"
+
+class t : public Ugly2DEngine::GameScene::SceneBase
+{
+private:
+    void Update(sf::RenderWindow& window) {}
+public:
+    t(std::string sceneName, int sceneID) : SceneBase(sceneName, sceneID)
+    {
+        printf("%s %d",_SceneName.c_str(), _SceneID);
+    }
+    
+};
+
+
 int main()
 {
-    wrapper t1,t2;
-
-    Testcreate(10, t1.GetSharedRegistry());
-
-    puts("now testing");
-
-    for (auto& reg : t2)
-    {
-        auto view = reg->view<int>();
-        for (auto entity : view)
-        {
-            auto& i = view.get<int>(entity);
-            printf("%d\n",i);
-        }
-    }
+    t t("a", 3);
 
     return 0;
 }
