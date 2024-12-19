@@ -19,13 +19,25 @@ namespace Ugly2DEngine
         public:
             enttRegistryWrapper();
 
-            entt::registry** begin();
+            inline entt::registry** begin()
+            {
+                return std::begin(_RegistryArray);
+            }
 
-            entt::registry** end();
+            inline entt::registry** end()
+            {
+                return std::end(_RegistryArray);
+            }
 
-            entt::registry& GetPrivateRegistry();
+            inline entt::registry& GetPrivateRegistry()
+            {
+                return _PrivateRegistry;
+            }
 
-            entt::registry& GetSharedRegistry();
+            inline entt::registry& GetSharedRegistry()
+            {
+                return _SharedRegistry;
+            }
 
         };
     }
