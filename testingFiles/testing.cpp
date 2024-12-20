@@ -2,6 +2,7 @@
 #include "..\Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp"
 #include "..\Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp"
 #include "..\Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp"
+#include "..\Ugly2DEngine\src\Headers\GameScene\SceneManager.hpp"
 
 using namespace Ugly2DEngine;
 using namespace GameScene;
@@ -37,21 +38,19 @@ public:
 
 int main()
 {
-    SceneStorage st;
+    SceneManager mgr;
     S1 s1("s1",1);
     S2 s2("s2",2);
-    st.RegisterScene(&s1);
-    st.RegisterScene(&s2);
+    
+    mgr.RegisterScene(&s1);
+    mgr.RegisterScene(&s2);
+    mgr.Initialize(1);
 
-    st.Initialize(2);
+    printf("%s %d\n",mgr.GetNowActivatedScene()->GetSceneName().c_str(), mgr.GetNowActivatedScene()->GetSceneID());
 
-    printf("%s %d\n",st.GetNowActivatedScene()->GetSceneName().c_str(), st.GetNowActivatedScene()->GetSceneID());
-    printf("%s %d\n", st.GetNowActivatedScene()->GetSceneName().c_str(), st.GetNowActivatedScene()->GetSceneID());
+    SceneManager::ChangeActivatedScene("s2");
 
-    st.ChangeActivatedScene("s1");
-
-    printf("%s %d\n", st.GetNowActivatedScene()->GetSceneName().c_str(), st.GetNowActivatedScene()->GetSceneID());
-    printf("%s %d\n", st.GetNowActivatedScene()->GetSceneName().c_str(), st.GetNowActivatedScene()->GetSceneID());
+    printf("%s %d\n", mgr.GetNowActivatedScene()->GetSceneName().c_str(), mgr.GetNowActivatedScene()->GetSceneID());
 
     return 0;
 }

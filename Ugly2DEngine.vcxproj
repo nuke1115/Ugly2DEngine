@@ -135,11 +135,13 @@
   <ItemGroup>
     <ClCompile Include="testingFiles\testing.cpp" />
     <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneBase.cpp" />
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneManager.cpp" />
     <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneStorage.cpp" />
     <ClCompile Include="Ugly2DEngine\src\Implements\Wrappers\enttRegistryWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp" />
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneManager.hpp" />
     <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp" />
     <ClInclude Include="Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp" />
   </ItemGroup>
