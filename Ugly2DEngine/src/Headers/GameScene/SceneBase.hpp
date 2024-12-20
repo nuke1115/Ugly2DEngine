@@ -40,6 +40,16 @@ namespace Ugly2DEngine
             /// </summary>
             virtual void OnActivated();
 
+            inline int GetSceneID() const
+            {
+                return _SceneID;
+            }
+
+            inline const std::string& GetSceneName() const
+            {
+                return _SceneName;
+            }
+
         };
     }
 }

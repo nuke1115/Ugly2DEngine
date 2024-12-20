@@ -95,6 +95,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -118,6 +119,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,10 +135,12 @@
   <ItemGroup>
     <ClCompile Include="testingFiles\testing.cpp" />
     <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneBase.cpp" />
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneStorage.cpp" />
     <ClCompile Include="Ugly2DEngine\src\Implements\Wrappers\enttRegistryWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp" />
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp" />
     <ClInclude Include="Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -26,7 +26,7 @@
       <UniqueIdentifier>{625a19b5-a391-44fc-9ec4-c7526c5dbdb2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Implement Files\GameScene">
-      <UniqueIdentifier>{2a77f44d-4a5f-4ef4-9def-cd383b2cb003}</UniqueIdentifier>
+      <UniqueIdentifier>{72a7d369-422f-410d-8f2f-fef77a0e4e69}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +39,9 @@
     <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneBase.cpp">
       <Filter>Implement Files\GameScene</Filter>
     </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneStorage.cpp">
+      <Filter>Implement Files\GameScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -49,6 +52,9 @@
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
     <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp">
+      <Filter>Header Files\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp">
       <Filter>Header Files\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
