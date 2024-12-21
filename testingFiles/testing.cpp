@@ -1,34 +1,56 @@
 #include <stdio.h>
 #include "..\Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp"
+#include "..\Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp"
+#include "..\Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp"
+#include "..\Ugly2DEngine\src\Headers\GameScene\SceneManager.hpp"
 
-using wrapper = Ugly2DEngine::Wrappers::enttRegistryWrapper;
+using namespace Ugly2DEngine;
+using namespace GameScene;
 
-void Testcreate(int n, entt::registry& reg)
+class S1 : public SceneBase
 {
-    for (int i = 0; i < n; i++)
+private:
+public:
+    void Update(sf::RenderWindow& window)
     {
-        auto entity = reg.create();
-        reg.emplace<int>(entity, i);
+
     }
-}
+    S1(std::string name, int id) : SceneBase(name, id)
+    {
+
+    }
+};
+
+class S2 : public SceneBase
+{
+private:
+public:
+    void Update(sf::RenderWindow& window)
+    {
+
+    }
+
+    S2(std::string name, int id) : SceneBase(name, id)
+    {
+
+    }
+};
 
 int main()
 {
-    wrapper t1,t2;
+    SceneManager mgr;
+    S1 s1("s1",1);
+    S2 s2("s2",2);
+    
+    mgr.RegisterScene(&s1);
+    mgr.RegisterScene(&s2);
+    mgr.Initialize(1);
 
-    Testcreate(10, t1.GetSharedRegistry());
+    printf("%s %d\n",mgr.GetNowActivatedScene()->GetSceneName().c_str(), mgr.GetNowActivatedScene()->GetSceneID());
 
-    puts("now testing");
+    SceneManager::ChangeActivatedScene("s2");
 
-    for (auto& reg : t2)
-    {
-        auto view = reg->view<int>();
-        for (auto entity : view)
-        {
-            auto& i = view.get<int>(entity);
-            printf("%d\n",i);
-        }
-    }
+    printf("%s %d\n", mgr.GetNowActivatedScene()->GetSceneName().c_str(), mgr.GetNowActivatedScene()->GetSceneID());
 
     return 0;
 }

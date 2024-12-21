@@ -25,6 +25,9 @@
     <Filter Include="Implement Files\Wrappers">
       <UniqueIdentifier>{625a19b5-a391-44fc-9ec4-c7526c5dbdb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Implement Files\GameScene">
+      <UniqueIdentifier>{72a7d369-422f-410d-8f2f-fef77a0e4e69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testingFiles\testing.cpp">
@@ -32,6 +35,15 @@
     </ClCompile>
     <ClCompile Include="Ugly2DEngine\src\Implements\Wrappers\enttRegistryWrapper.cpp">
       <Filter>Implement Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneBase.cpp">
+      <Filter>Implement Files\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneStorage.cpp">
+      <Filter>Implement Files\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneManager.cpp">
+      <Filter>Implement Files\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +53,15 @@
   <ItemGroup>
     <ClInclude Include="Ugly2DEngine\src\Headers\Wrappers\enttRegistryWrapper.hpp">
       <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneBase.hpp">
+      <Filter>Header Files\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp">
+      <Filter>Header Files\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneManager.hpp">
+      <Filter>Header Files\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
