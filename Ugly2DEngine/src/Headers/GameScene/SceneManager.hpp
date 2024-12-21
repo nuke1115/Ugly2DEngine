@@ -13,6 +13,12 @@ namespace Ugly2DEngine
         private:
             static SceneStorage _SceneStorage;
         public:
+
+            SceneManager();
+
+            SceneManager(SceneManager&&) = delete;
+            SceneManager(const SceneManager&) = delete;
+
             /// <summary>
             /// returns now activated scene pointer
             /// </summary>

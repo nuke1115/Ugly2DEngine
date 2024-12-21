@@ -42,6 +42,9 @@
     <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneStorage.cpp">
       <Filter>Implement Files\GameScene</Filter>
     </ClCompile>
+    <ClCompile Include="Ugly2DEngine\src\Implements\GameScene\SceneManager.cpp">
+      <Filter>Implement Files\GameScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -55,6 +58,9 @@
       <Filter>Header Files\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneStorage.hpp">
+      <Filter>Header Files\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Ugly2DEngine\src\Headers\GameScene\SceneManager.hpp">
       <Filter>Header Files\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
